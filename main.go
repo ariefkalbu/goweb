@@ -17,6 +17,7 @@ func main() {
 	mux.HandleFunc("/", handler.HomeHandler) //as a root
 	mux.HandleFunc("/hello", handler.HelloHandler)
 	mux.HandleFunc("/arief", handler.AriefHandler)
+	mux.HandleFunc("/product", handler.ProductHandler)
 
 	log.Println("Starting localhost:71")
 
