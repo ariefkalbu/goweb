@@ -18,6 +18,14 @@ func main() {
 	mux.HandleFunc("/hello", handler.HelloHandler)
 	mux.HandleFunc("/arief", handler.AriefHandler)
 	mux.HandleFunc("/product", handler.ProductHandler)
+	mux.HandleFunc("/postget", handler.PostGet)
+	mux.HandleFunc("/form", handler.Form)
+	mux.HandleFunc("/process", handler.Process)
+
+	//Load CSS , JS
+
+	fileserver := http.FileServer(http.Dir("assets"))
+	mux.Handle("/static/", http.StripPrefix("/static", fileserver))
 
 	log.Println("Starting localhost:71")
 

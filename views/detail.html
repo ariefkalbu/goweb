@@ -1,0 +1,15 @@
+{{ template "layout" .}}
+{{ define "main" }}
+
+<div class="result">
+    <div>
+        <label for="nama"> Nama </label>
+        {{ .nama }}
+    </div>
+    <div>
+        <label for="nomor"> Nomor </label>
+        {{ .nomor }}
+    </div>
+</div>
+
+{{ end }}
